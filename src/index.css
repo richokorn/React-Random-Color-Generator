@@ -40,4 +40,5 @@ code {
   border-radius: 1em;
   line-height: 150px;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
 }

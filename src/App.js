@@ -10,10 +10,6 @@ function App() {
         : `${floorDecimal > 65535 ? '' : '0'}0${floorDecimal.toString(16)}`
     }`,
   );
-  const mystyle = {
-    backgroundColor: hex,
-    transition: 'all .5s ease',
-  };
 
   function RandomHex() {
     const floorRandomDecimal = Math.floor(Math.random() * 16777215);
@@ -45,8 +41,8 @@ function App() {
           </g>
         </svg>
 
-        <div className="rectangle" style={mystyle}>
-          Generated Color: {`<${hex}>`}
+        <div className="rectangle" style={{ backgroundColor: hex }}>
+          Generated Color: {hex}
         </div>
         <div className="spacer" />
         <button className="button" onClick={RandomHex}>
