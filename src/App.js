@@ -7,7 +7,7 @@ function App() {
     `#${
       floorDecimal > 1048575
         ? floorDecimal.toString(16)
-        : '0' + floorDecimal.toString(16)
+        : `${floorDecimal > 65535 ? '' : '0'}0${floorDecimal.toString(16)}`
     }`,
   );
   const mystyle = {
@@ -21,7 +21,9 @@ function App() {
       `#${
         floorRandomDecimal > 1048575
           ? floorRandomDecimal.toString(16)
-          : '0' + floorRandomDecimal.toString(16)
+          : `${
+              floorRandomDecimal > 65535 ? '' : `0`
+            }0${floorRandomDecimal.toString(16)}`
       }`,
     );
   }
