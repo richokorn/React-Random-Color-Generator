@@ -16,11 +16,12 @@ function App() {
   };
 
   function RandomHex() {
+    const floorRandomDecimal = Math.floor(Math.random() * 16777215);
     setHex(
       `#${
-        floorDecimal > 1048575
-          ? floorDecimal.toString(16)
-          : '0' + floorDecimal.toString(16)
+        floorRandomDecimal > 1048575
+          ? floorRandomDecimal.toString(16)
+          : '0' + floorRandomDecimal.toString(16)
       }`,
     );
   }
