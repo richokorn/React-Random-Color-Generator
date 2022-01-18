@@ -44,7 +44,7 @@ function App() {
         </svg>
 
         <div className="rectangle" style={mystyle}>
-          Generated Color: {hex}
+          Generated Color: {`<${hex}>`}
         </div>
         <div className="spacer" />
         <button className="button" onClick={RandomHex}>
